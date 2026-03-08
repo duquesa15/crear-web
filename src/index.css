@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  
+  --color-crear-mint: #e8f1ee; /* Very light sage */
+  --color-crear-blue: #eef5f9; /* Very light blue */
+  --color-crear-peach: #fdf2f1; /* Very light coral */
+  --color-crear-lavender: #f5f3f9; /* Very light purple */
+  --color-crear-primary: #96c5b0; /* Sage Green from the "C" */
+  --color-crear-secondary: #a3c9e2; /* Soft Blue from puzzle */
+  --color-crear-accent: #f9d976; /* Golden Yellow from rays */
+  --color-crear-coral: #f4a7a4; /* Soft Coral from bulb */
+  --color-crear-purple: #c5b3e6; /* Soft Purple from puzzle */
+  --color-crear-text: #5d5d5d; /* Warm Charcoal from "REAR" */
+  --color-crear-bg: #fdfcf8; /* Warm off-white paper texture */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-crear-text bg-crear-bg;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display font-semibold;
+  }
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-sm;
+}
+
+.section-padding {
+  @apply py-20 px-6 md:px-12 lg:px-24;
+}
+
+.btn-primary {
+  @apply bg-crear-primary hover:bg-crear-primary/90 text-white px-8 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg flex items-center gap-2;
+}
+
+.btn-secondary {
+  @apply bg-white border-2 border-crear-primary text-crear-primary hover:bg-crear-mint px-8 py-3 rounded-full transition-all duration-300 flex items-center gap-2;
+}
+
+.btn-whatsapp {
+  @apply bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg flex items-center gap-2;
+}
